@@ -1,0 +1,10 @@
+<div>
+  <h2>Cuaca Saat Ini</h2>
+  <input [(ngModel)]="city" placeholder="Masukkan nama kota" />
+  <button (click)="getWeather()">Lihat Cuaca</button>
+  <div *ngIf="weatherData">
+    <h3>{{ weatherData.name }}</h3>
+    <p>{{ weatherData.weather[0].description }}</p>
+    <p>{{ weatherData.main.temp }}°C</p>
+  </div>
+</div>
