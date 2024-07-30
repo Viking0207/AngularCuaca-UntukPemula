@@ -1,24 +1,23 @@
 <div class="card">
   <div class="card-body">
     <h2 class="card-title text-center">Cuaca Saat Ini</h2>
-    <div class="input-group mb-3">
-      <input [(ngModel)]="city" type="text" class="form-control" placeholder="Masukkan nama kota" />
-      <div class="input-group-append">
-        <button (click)="getWeather()" class="btn btn-primary">Lihat Cuaca</button>
+    <form (ngSubmit)="getWeather()" class="mb-3">
+      <div class="input-group">
+        <input [(ngModel)]="city" name="city" type="text" class="form-control" placeholder="Masukkan nama kota" required />
+        <div class="input-group-append">
+          <button type="submit" class="btn btn-primary">Lihat Cuaca</button>
+        </div>
       </div>
-    </div>
+    </form>
   </div>
-
-  
-  
 
   <div *ngIf="errorMessage" class="alert alert-danger">
     {{ errorMessage }}
   </div>
 
   <div *ngIf="weatherData" class="text-center">
-    <h3>{{ weatherData.name }}</h3>
-    <p class="lead">{{ weatherData.weather[0].description }}</p>
-    <p class="display-4">{{ weatherData.main.temp }}°C</p>
+    <h2>Cuaca di {{ weatherData.location.name }}</h2>
+    <p>Suhu: {{ weatherData.current.temp_c }}°C</p>
+    <p>Kondisi: {{ weatherData.current.condition.text }}</p>
   </div>
 </div>
