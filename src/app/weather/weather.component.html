@@ -1,10 +1,24 @@
-<div>
-  <h2>Cuaca Saat Ini</h2>
-  <input [(ngModel)]="city" placeholder="Masukkan nama kota" />
-  <button (click)="getWeather()">Lihat Cuaca</button>
-  <div *ngIf="weatherData">
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title text-center">Cuaca Saat Ini</h2>
+    <div class="input-group mb-3">
+      <input [(ngModel)]="city" type="text" class="form-control" placeholder="Masukkan nama kota" />
+      <div class="input-group-append">
+        <button (click)="getWeather()" class="btn btn-primary">Lihat Cuaca</button>
+      </div>
+    </div>
+  </div>
+
+  
+  
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="weatherData" class="text-center">
     <h3>{{ weatherData.name }}</h3>
-    <p>{{ weatherData.weather[0].description }}</p>
-    <p>{{ weatherData.main.temp }}°C</p>
+    <p class="lead">{{ weatherData.weather[0].description }}</p>
+    <p class="display-4">{{ weatherData.main.temp }}°C</p>
   </div>
 </div>

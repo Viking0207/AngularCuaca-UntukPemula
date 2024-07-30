@@ -13,12 +13,19 @@ import { FormsModule } from "@angular/forms";
 export class WeatherComponent {
   city: string = '';
   weatherData: any;
+  errorMessage: string = '';
+
 
   constructor(private weatherService: WeatherService) {}
 
   getWeather(){
     this.weatherService.getWeather(this.city).subscribe(data => {
       this.weatherData = data;
-    })
+      this.errorMessage = '';
+    },
+    error => {
+      this.errorMessage = error;
+      this.weatherData = null;
+    });
   }
 }
