@@ -3,7 +3,14 @@
     <h2 class="card-title text-center">Cuaca Saat Ini</h2>
     <form (ngSubmit)="getWeather()" class="mb-3">
       <div class="input-group">
-        <input [(ngModel)]="city" name="city" type="text" class="form-control" placeholder="Masukkan nama kota" required />
+        <input
+          [(ngModel)]="city"
+          name="city"
+          type="text"
+          class="form-control"
+          placeholder="Masukkan nama kota"
+          required
+        />
         <div class="input-group-append">
           <button type="submit" class="btn btn-primary">Lihat Cuaca</button>
         </div>
