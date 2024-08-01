@@ -29,8 +29,10 @@ dan dia akan masuk ke direktori yang berada dikontrol CLI nya (Kalo secara defau
 11. Lalu kalian save kode dengan `ctrl + s` dan inputkan nama kota kalian.
 12. Tada! berhasil! sederhana yah? boleh kalian modifikasi lagi kok source codenya supaya lebih menarik lagi :) atau sederhananya modifikasi sesuai keinginan kalian.
 
-# Baiklah sekian dulu panduan dari saya. Bagi kalian yang ingin berkontribusi untuk source code silahkan, jika tidak gunakanlah dengan bijak yah teman-teman :) 
+# Penutup
 
-# Kode ini untuk pemula dan saya juga masih pemula
+Baiklah sekian dulu panduan dari saya. Bagi kalian yang ingin berkontribusi untuk source code silahkan, jika tidak gunakanlah dengan bijak yah teman-teman :) 
+
+Kode ini untuk pemula dan saya juga masih pemula
 Semoga membantu...
 
